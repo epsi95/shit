@@ -37,5 +37,5 @@ def show_status():
         print('[renamed/moved] :')
         print(*[i + ' ' * (40 - len(i)) + 'hash:' + renamed[i][-4:] for i in renamed], sep='\n')
     if deleted:
-        print('[deleted] :')
+        print('[modified] :')
         print(*[i + ' ' * (40 - len(i)) + 'hash:' + deleted[i][-4:] for i in deleted], sep='\n')
