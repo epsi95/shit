@@ -1,5 +1,5 @@
 import os
-from .create_tree import create_tree
+from .tree_util import create_tree
 
 
 def add_files_to_staging_area(path):
@@ -10,6 +10,6 @@ def add_files_to_staging_area(path):
             for file in files:
                 files_to_be_staged.append(os.path.join(root, file))
     else:
-        files_to_be_staged = [os.path.join('./', path)]
+        files_to_be_staged = [path]
 
     create_tree(files_to_be_staged)

@@ -10,7 +10,8 @@ def create_empty_repo():
     ]
     for each_folder in req_folders:
         os.mkdir(each_folder, mode=644)
-
+    with open('./.shit/refs/main', 'w') as f:
+        f.write('')
     # creating some additional files
     with open('./.shit/HEAD', 'w') as f:
-        pass
+        f.write('main')
